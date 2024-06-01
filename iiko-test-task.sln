@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iiko.WebAPI", "iiko.WebAPI\iiko.WebAPI.csproj", "{B7551CEE-EBE6-4D72-8935-5F37D2C3E645}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iiko.UnitTests", "iiko.UnitTests\iiko.UnitTests.csproj", "{57DF36BF-87D7-463D-81CB-8A38801B523F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7551CEE-EBE6-4D72-8935-5F37D2C3E645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7551CEE-EBE6-4D72-8935-5F37D2C3E645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7551CEE-EBE6-4D72-8935-5F37D2C3E645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7551CEE-EBE6-4D72-8935-5F37D2C3E645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57DF36BF-87D7-463D-81CB-8A38801B523F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57DF36BF-87D7-463D-81CB-8A38801B523F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57DF36BF-87D7-463D-81CB-8A38801B523F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57DF36BF-87D7-463D-81CB-8A38801B523F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
