@@ -62,7 +62,7 @@ public class ClientController(IClientService service, IMapper mapper) : Controll
 
     // api/book/{bookId}
     [AllowAnonymous]
-    [HttpDelete("{bookId:long}")]
+    [HttpDelete("{clientId:long}")]
     public async Task<IActionResult> DeleteBook([FromRoute] long clientId)
     {
         var result = await service.DeleteClientAsync(clientId);

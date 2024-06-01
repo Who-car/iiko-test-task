@@ -15,7 +15,9 @@ public static class ServiceCollectionExtensionMethods
     {
         services.AddDbContext<AppDbContext>(builder =>
         {
-            builder.UseNpgsql(connectionString);
+            builder
+                .UseNpgsql(connectionString)
+                .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
         });
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();

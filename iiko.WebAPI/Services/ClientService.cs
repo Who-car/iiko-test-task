@@ -1,4 +1,5 @@
 ﻿using System.Linq.Expressions;
+using AutoMapper;
 using WebAPI.Abstractions.Repositories;
 using WebAPI.Abstractions.Services;
 using WebAPI.Entities;
@@ -7,7 +8,8 @@ namespace WebAPI.Services;
 
 public class ClientService(
     IClientRepository repository, 
-    IUnitOfWork unitOfWork) : IClientService
+    IUnitOfWork unitOfWork,
+    IMapper mapper) : IClientService
 {
     public async Task<Client?> GetClientAsync(long clientId)
     {
@@ -82,6 +84,9 @@ public class ClientService(
     {
         try
         {
+            // var client = await repository.GetByIdAsync(newClient.Id);
+            // client = mapper.Map(newClient, client);
+            
             var result = repository.Update(client);
             await unitOfWork.SaveChangesAsync();
             return result;
