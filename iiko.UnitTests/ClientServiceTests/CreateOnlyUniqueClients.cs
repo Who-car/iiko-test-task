@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using AutoMapper;
+using Moq;
 using WebAPI.Abstractions.Repositories;
 using WebAPI.Abstractions.Services;
 using WebAPI.Entities;
@@ -10,13 +11,15 @@ public class CreateOnlyUniqueClients
 {
     private readonly Mock<IClientRepository> _mockRepository;
     private readonly Mock<IUnitOfWork> _mockUnitOfWork;
+    private readonly Mock<IMapper> _mockMapper;
     private readonly IClientService _clientService;
 
     public CreateOnlyUniqueClients()
     {
+        _mockMapper = new Mock<IMapper>();
         _mockRepository = new Mock<IClientRepository>();
         _mockUnitOfWork = new Mock<IUnitOfWork>();
-        _clientService = new ClientService(_mockRepository.Object, _mockUnitOfWork.Object);
+        _clientService = new ClientService(_mockRepository.Object, _mockUnitOfWork.Object, _mockMapper.Object);
     }
     
     [Fact]
